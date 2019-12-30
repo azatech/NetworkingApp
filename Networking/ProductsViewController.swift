@@ -12,12 +12,23 @@ class ProductsViewController: UIViewController {
 
     var allDevices: [Devices] = []
 
+    private var deviceName: String? = nil
+    private var deviceURL: String? = nil
+
 
     @IBOutlet var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        tableView.allowsSelection = true
+//        tableView.allowsSelectionDuringEditing = true
+
+
+
+
         fetchData()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
 
@@ -27,17 +38,12 @@ class ProductsViewController: UIViewController {
         guard let url = URL(string: jsonToStringURL) else { return }
 
         let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            guard let data = data, let response = response else { return }
+        session.dataTask(with: url) { (data, _, error) in
+            guard let data = data else { return }
 
             do {
-                let products = try JSONDecoder().decode([Devices].self, from: data)
-                for i in products {
-                    self.allDevices.append(i)
-                }
-
-//                print(self.allDevices)
-
+                self.allDevices = try JSONDecoder().decode([Devices].self, from: data)
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -54,40 +60,67 @@ class ProductsViewController: UIViewController {
 extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
-        return 90
+        return 100
     }
 
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let allAppleDevices = allDevices[indexPath.row]
+
+        deviceName = allAppleDevices.serial
+        deviceURL = allAppleDevices.link
+
+        performSegue(withIdentifier: "description", sender: self)
+
+    }
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let segueId = segue.identifier
+        if segueId == "description" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destination = segue.destination as! WebViewController
+
+                destination.selectedDeviceName = allDevices[indexPath.row].serial
+
+                    destination.selectedDeviceURL = allDevices[indexPath.row].link
+
+            }
+        }
+
+
+
+
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProductCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductCell
 
-        let allInOneDevices = allDevices[indexPath.row]
-
-
-
-        DispatchQueue.global().async {
-            guard let imageUrl = URL(string: allInOneDevices.link_Image) else { return }
-                  guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-
-                  DispatchQueue.main.async {
-                    cell?.imageView?.image = UIImage(data: imageData)
-                    self.tableView.reloadData()
-                  }
-              }
-
-
-        cell?.nameLbl.text = allInOneDevices.serial
-        cell?.priceLbl.text = String(allInOneDevices.price)
-
-        
-        return cell!
+        configureCell(cell: cell, for: indexPath)
+        return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allDevices.count
+    }
+
+    // Configuring cell
+    private func configureCell(cell: ProductCell, for indexPath: IndexPath) {
+
+        let appleDevices = allDevices[indexPath.row]
+
+        cell.nameLbl.text = appleDevices.serial
+        cell.priceLbl.text = String(appleDevices.price)
+
+        DispatchQueue.global().async {
+            guard let imageURL = URL(string: appleDevices.link_Image) else { return }
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+
+            DispatchQueue.main.async {
+                cell.imageView?.image = UIImage(data: imageData)
+                self.tableView.reloadData()
+            }
+        }
+
     }
 }

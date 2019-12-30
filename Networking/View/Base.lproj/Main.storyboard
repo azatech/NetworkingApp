@@ -10,7 +10,7 @@
         <!--Main View Controller-->
         <scene sceneID="W7l-UH-1SB">
             <objects>
-                <viewController id="OZQ-BH-0eh" customClass="MainViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OZQ-BH-0eh" customClass="MainViewController" customModule="NetworkingAppApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17d-Ug-fkp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetworkingAppApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +128,7 @@
         <!--Products View Controller-->
         <scene sceneID="qtd-e4-XUa">
             <objects>
-                <viewController id="fdC-FZ-2fp" customClass="ProductsViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fdC-FZ-2fp" customClass="ProductsViewController" customModule="NetworkingAppApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ax-5t-eRi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,62 +137,56 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="153" id="qXM-ZP-Tqp" customClass="ProductCell" customModule="Networking" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="153" id="qXM-ZP-Tqp" customClass="ProductCell" customModule="NetworkingAppApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="153"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qXM-ZP-Tqp" id="Cdp-s6-jMB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-Ql-V3y">
-                                                    <rect key="frame" x="0.0" y="11" width="414" height="153"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zE0-6d-P7c">
-                                                            <rect key="frame" x="0.0" y="12.5" width="204" height="128"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="128" id="gp6-D6-VQq"/>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="pwl-bs-sVc"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kb8-qG-P6S">
-                                                            <rect key="frame" x="210" y="18.5" width="204" height="116"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFa-1a-afZ">
-                                                                    <rect key="frame" x="73.5" y="0.0" width="57.5" height="52"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-CV-i4p">
-                                                                    <rect key="frame" x="62" y="64" width="80" height="52"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zE0-6d-P7c">
+                                                    <rect key="frame" x="20" y="13" width="128" height="127"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFa-1a-afZ">
+                                                    <rect key="frame" x="164" y="11" width="238" height="52"/>
                                                     <constraints>
-                                                        <constraint firstItem="kb8-qG-P6S" firstAttribute="height" secondItem="zt9-Ql-V3y" secondAttribute="height" multiplier="0.86" constant="-15.990000000000009" id="1ja-l8-Z2U"/>
+                                                        <constraint firstAttribute="height" constant="52" id="fxr-cX-2zi"/>
                                                     </constraints>
-                                                </stackView>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-CV-i4p">
+                                                    <rect key="frame" x="164" y="78" width="238" height="62"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="238" id="WwI-7n-1m4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eFa-1a-afZ" firstAttribute="leading" secondItem="zE0-6d-P7c" secondAttribute="trailing" constant="16" id="0go-nB-XWc"/>
+                                                <constraint firstItem="eFa-1a-afZ" firstAttribute="trailing" secondItem="MTV-CV-i4p" secondAttribute="trailing" id="128-5c-m7e"/>
+                                                <constraint firstItem="zE0-6d-P7c" firstAttribute="leading" secondItem="Cdp-s6-jMB" secondAttribute="leadingMargin" id="9Im-lb-fyd"/>
+                                                <constraint firstItem="eFa-1a-afZ" firstAttribute="top" secondItem="Cdp-s6-jMB" secondAttribute="topMargin" id="IHS-7b-zgZ"/>
+                                                <constraint firstItem="MTV-CV-i4p" firstAttribute="top" secondItem="eFa-1a-afZ" secondAttribute="bottom" constant="15" id="R2w-Vm-wBv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eFa-1a-afZ" secondAttribute="trailing" constant="-8" id="RgO-pF-MWH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MTV-CV-i4p" secondAttribute="bottom" constant="2" id="Xao-WW-i5j"/>
+                                                <constraint firstItem="MTV-CV-i4p" firstAttribute="bottom" secondItem="zE0-6d-P7c" secondAttribute="bottom" id="ecn-g9-Xas"/>
+                                                <constraint firstItem="zE0-6d-P7c" firstAttribute="centerY" secondItem="Cdp-s6-jMB" secondAttribute="centerY" id="jw6-9e-dPd"/>
+                                                <constraint firstItem="MTV-CV-i4p" firstAttribute="leading" secondItem="zE0-6d-P7c" secondAttribute="trailing" constant="16" id="vsr-y1-L28"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="zt9-Ql-V3y" firstAttribute="height" secondItem="qXM-ZP-Tqp" secondAttribute="height" id="WRo-qh-mQ5"/>
-                                            <constraint firstItem="zt9-Ql-V3y" firstAttribute="width" secondItem="qXM-ZP-Tqp" secondAttribute="width" id="Wfv-hT-pus"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="imageLbl" destination="zE0-6d-P7c" id="Ac9-Eq-GcG"/>
                                             <outlet property="nameLbl" destination="eFa-1a-afZ" id="k0N-Be-We1"/>
                                             <outlet property="priceLbl" destination="MTV-CV-i4p" id="syv-js-lnb"/>
+                                            <segue destination="Pr0-ln-f5C" kind="show" identifier="description" id="sqd-Yr-rdN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="fdC-FZ-2fp" id="WNH-VW-u9c"/>
-                                    <outlet property="delegate" destination="fdC-FZ-2fp" id="PCu-iv-Kqb"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -207,11 +201,47 @@
                     <navigationItem key="navigationItem" id="Ia3-AG-zTr"/>
                     <connections>
                         <outlet property="tableView" destination="xUi-Hb-cbE" id="Cdl-hi-04x"/>
+                        <segue destination="Pr0-ln-f5C" kind="show" identifier="description2" id="TBb-fW-tcC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faf-4f-H4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="880.58035714285711"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="e19-Z5-XGi">
+            <objects>
+                <viewController id="Pr0-ln-f5C" customClass="WebViewController" customModule="NetworkingAppApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kon-eB-5nW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cv-pZ-1sj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4cv-pZ-1sj" firstAttribute="top" secondItem="BU5-7N-Mwv" secondAttribute="top" id="Eea-hP-Jmw"/>
+                            <constraint firstItem="4cv-pZ-1sj" firstAttribute="trailing" secondItem="BU5-7N-Mwv" secondAttribute="trailing" id="P1F-15-UqV"/>
+                            <constraint firstAttribute="bottom" secondItem="4cv-pZ-1sj" secondAttribute="bottom" id="VUE-Hg-Hjj"/>
+                            <constraint firstItem="4cv-pZ-1sj" firstAttribute="leading" secondItem="BU5-7N-Mwv" secondAttribute="leading" id="kMQ-Bm-mYE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BU5-7N-Mwv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FLz-Rb-GJc"/>
+                    <connections>
+                        <outlet property="webView" destination="4cv-pZ-1sj" id="rC7-uX-AAJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HvV-zh-b0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905.7971014492755" y="879.91071428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TtS-tF-A30">
@@ -232,4 +262,7 @@
             <point key="canvasLocation" x="-723.1884057971015" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sqd-Yr-rdN"/>
+    </inferredMetricsTieBreakers>
 </document>

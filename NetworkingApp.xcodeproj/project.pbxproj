@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A43F007523BA1D1300EC61A0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F007423BA1D1300EC61A0 /* WebViewController.swift */; };
 		A4CEF86F23B92F91007F4C10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEF86E23B92F91007F4C10 /* AppDelegate.swift */; };
 		A4CEF87123B92F91007F4C10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEF87023B92F91007F4C10 /* SceneDelegate.swift */; };
 		A4CEF87323B92F91007F4C10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEF87223B92F91007F4C10 /* ViewController.swift */; };
@@ -20,7 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A4CEF86B23B92F91007F4C10 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43F007423BA1D1300EC61A0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A4CEF86B23B92F91007F4C10 /* NetworkingAppApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingAppApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CEF86E23B92F91007F4C10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CEF87023B92F91007F4C10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A4CEF87223B92F91007F4C10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		A4CEF86C23B92F91007F4C10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4CEF86B23B92F91007F4C10 /* Networking.app */,
+				A4CEF86B23B92F91007F4C10 /* NetworkingAppApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +71,7 @@
 				A4CEF87223B92F91007F4C10 /* ViewController.swift */,
 				A4CEF88223B93901007F4C10 /* MainViewController.swift */,
 				A4CEF88723B95998007F4C10 /* ProductsViewController.swift */,
+				A43F007423BA1D1300EC61A0 /* WebViewController.swift */,
 				A4CEF88623B9594D007F4C10 /* Model  */,
 				A4CEF88923B959CE007F4C10 /* View */,
 				A4CEF87723B92F96007F4C10 /* Assets.xcassets */,
@@ -98,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A4CEF86A23B92F91007F4C10 /* Networking */ = {
+		A4CEF86A23B92F91007F4C10 /* NetworkingApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4CEF87F23B92F96007F4C10 /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildConfigurationList = A4CEF87F23B92F96007F4C10 /* Build configuration list for PBXNativeTarget "NetworkingApp" */;
 			buildPhases = (
 				A4CEF86723B92F91007F4C10 /* Sources */,
 				A4CEF86823B92F91007F4C10 /* Frameworks */,
@@ -110,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = Networking;
+			name = NetworkingApp;
 			productName = Networking;
-			productReference = A4CEF86B23B92F91007F4C10 /* Networking.app */;
+			productReference = A4CEF86B23B92F91007F4C10 /* NetworkingAppApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +133,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A4CEF86623B92F91007F4C10 /* Build configuration list for PBXProject "Networking" */;
+			buildConfigurationList = A4CEF86623B92F91007F4C10 /* Build configuration list for PBXProject "NetworkingApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A4CEF86A23B92F91007F4C10 /* Networking */,
+				A4CEF86A23B92F91007F4C10 /* NetworkingApp */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +176,7 @@
 				A4CEF88823B95998007F4C10 /* ProductsViewController.swift in Sources */,
 				A4CEF88B23B9614B007F4C10 /* ProductCell.swift in Sources */,
 				A4CEF88323B93902007F4C10 /* MainViewController.swift in Sources */,
+				A43F007523BA1D1300EC61A0 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ios-azatech.Networking";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NetworkingAppApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -342,7 +346,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ios-azatech.Networking";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NetworkingAppApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -351,7 +355,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A4CEF86623B92F91007F4C10 /* Build configuration list for PBXProject "Networking" */ = {
+		A4CEF86623B92F91007F4C10 /* Build configuration list for PBXProject "NetworkingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4CEF87D23B92F96007F4C10 /* Debug */,
@@ -360,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4CEF87F23B92F96007F4C10 /* Build configuration list for PBXNativeTarget "Networking" */ = {
+		A4CEF87F23B92F96007F4C10 /* Build configuration list for PBXNativeTarget "NetworkingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4CEF88023B92F96007F4C10 /* Debug */,
