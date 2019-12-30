@@ -13,6 +13,10 @@
 		A4CEF87623B92F91007F4C10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4CEF87423B92F91007F4C10 /* Main.storyboard */; };
 		A4CEF87823B92F96007F4C10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4CEF87723B92F96007F4C10 /* Assets.xcassets */; };
 		A4CEF87B23B92F96007F4C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4CEF87923B92F96007F4C10 /* LaunchScreen.storyboard */; };
+		A4CEF88323B93902007F4C10 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEF88223B93901007F4C10 /* MainViewController.swift */; };
+		A4CEF88523B958AC007F4C10 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEF88423B958AC007F4C10 /* Devices.swift */; };
+		A4CEF88823B95998007F4C10 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEF88723B95998007F4C10 /* ProductsViewController.swift */; };
+		A4CEF88B23B9614B007F4C10 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEF88A23B9614B007F4C10 /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A4CEF87723B92F96007F4C10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4CEF87A23B92F96007F4C10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4CEF87C23B92F96007F4C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4CEF88223B93901007F4C10 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A4CEF88423B958AC007F4C10 /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
+		A4CEF88723B95998007F4C10 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		A4CEF88A23B9614B007F4C10 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,32 @@
 				A4CEF86E23B92F91007F4C10 /* AppDelegate.swift */,
 				A4CEF87023B92F91007F4C10 /* SceneDelegate.swift */,
 				A4CEF87223B92F91007F4C10 /* ViewController.swift */,
-				A4CEF87423B92F91007F4C10 /* Main.storyboard */,
+				A4CEF88223B93901007F4C10 /* MainViewController.swift */,
+				A4CEF88723B95998007F4C10 /* ProductsViewController.swift */,
+				A4CEF88623B9594D007F4C10 /* Model  */,
+				A4CEF88923B959CE007F4C10 /* View */,
 				A4CEF87723B92F96007F4C10 /* Assets.xcassets */,
 				A4CEF87923B92F96007F4C10 /* LaunchScreen.storyboard */,
 				A4CEF87C23B92F96007F4C10 /* Info.plist */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A4CEF88623B9594D007F4C10 /* Model  */ = {
+			isa = PBXGroup;
+			children = (
+				A4CEF88423B958AC007F4C10 /* Devices.swift */,
+				A4CEF88A23B9614B007F4C10 /* ProductCell.swift */,
+			);
+			path = "Model ";
+			sourceTree = "<group>";
+		};
+		A4CEF88923B959CE007F4C10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4CEF87423B92F91007F4C10 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +168,11 @@
 			files = (
 				A4CEF87323B92F91007F4C10 /* ViewController.swift in Sources */,
 				A4CEF86F23B92F91007F4C10 /* AppDelegate.swift in Sources */,
+				A4CEF88523B958AC007F4C10 /* Devices.swift in Sources */,
 				A4CEF87123B92F91007F4C10 /* SceneDelegate.swift in Sources */,
+				A4CEF88823B95998007F4C10 /* ProductsViewController.swift in Sources */,
+				A4CEF88B23B9614B007F4C10 /* ProductCell.swift in Sources */,
+				A4CEF88323B93902007F4C10 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
